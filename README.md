@@ -1,22 +1,21 @@
 # Dialogue-System
-
-Dialogue System 2D was developed with the idea of adding more immersion and freedom to the developer, providing in
+Dialogue System 2D was developed with the idea of adding more immersion and freedom to the developer, providing in<br/>
 a simple way a system much requested by the internet and community of independent developers 
  
 # Links
- * Demonstration of it working
+ * Demonstration of it working<br/>
 Youtube : 
 
- * In case of doubt, contact me on my personal instagram.
+ * In case of doubt, contact me on my personal instagram.<br/>
 Instagram : https://www.instagram.com/mtcorcini/
 
 # Observation
-Part of the Dialogo scripts I got from an internet(Youtube) tutorial, the rest I implemented with my own code 
+Part of the Dialogo scripts I got from an internet(Youtube) tutorial, the rest I implemented with my own code<br/>
 (if you who created it recognize the part of your code that is there, contact me to leave the credits)
 
 # The Velle´s Tale
-The Ville´sTale is my indie game in development
+The Ville´sTale is my indie game in development<br/>
 
- * Follow us to more news about the game
+ * Follow us to more news about the game<br/>
 Instagram : https://www.instagram.com/dawnshardpro/
 
