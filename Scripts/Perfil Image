@@ -1,0 +1,16 @@
+//To active perfil img in canvas use this script. In this case, he is dealing with two characters 
+public void OnTriggerEnter2D(Collider2D collision2D)
+{
+  if (collision2D.gameObject.CompareTag("Npc"))
+  {
+    "tocouYellu" = true;
+    "tocouPedron" = false;
+   //Debug.Log("NPC");
+  }
+  else if (collision2D.gameObject.CompareTag("NpcII"))
+  {
+   "tocouPedron" = true;
+   "tocouYellu" = false;
+  //Debug.Log("NPCII");
+  }
+}
