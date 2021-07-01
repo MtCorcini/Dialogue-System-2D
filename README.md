@@ -6,12 +6,15 @@ a simple way a system much requested by the internet and community of independen
  * Demonstration of it working<br/>
 Youtube : 
 
- * In case of doubt, contact me on my personal instagram.<br/>
+ * In case of doubt, contact me on my personal social network.<br/>
 Instagram : https://www.instagram.com/mtcorcini/
 
-# Observation
+# Observations
+ Please contribute the code so it can get better.
+
 Part of the Dialogo scripts I got from an internet(Youtube) tutorial, the rest I implemented with my own code<br/>
 (if you who created it recognize the part of your code that is there, contact me to leave the credits)
+
 
 # The Velle´s Tale
 The Ville´sTale is my indie game in development<br/>
