@@ -1,0 +1,45 @@
+//Movie Effect = Camera Zoom Effect
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Cinemachine;
+
+public class MovieEffect : MonoBehaviour
+{
+    public GameObject CameraZoom;
+    
+    public Animator anim;
+
+    //Var so that it doesn't input the Reverse Zoom animation before it goes into Standard Zoom
+    public int inputZoom;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        inputZoom = 0;
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision2D)
+    {
+        if(collision2D.gameObject.CompareTag("ZoomEffect"))
+        {
+            anim.Play("cameraZoom");
+
+            inputZoom = 1;
+
+           //Debug.Log("Zoom");             
+        }
+        else if (inputZoom == 1)
+        {
+           if (collision2D.gameObject.CompareTag("ZoomEffectIN"))
+           {
+               anim.Play("cameraZoomIN");
+
+               inputZoom = 0;
+
+              //Debug.Log("Zoom Inverso");
+           }
+        }
+    }
+}
