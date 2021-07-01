@@ -1,5 +1,5 @@
 # Dialogue-System
-Dialogue System 2D was developed with the idea of adding more immersion and freedom to the developer, providing in<br/>
+Dialogue System 2D was developed with the idea of adding more immersion and freedom to the developer, providing in
 a simple way a system much requested by the internet and community of independent developers 
  
 # Links
