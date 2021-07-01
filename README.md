@@ -10,9 +10,9 @@ Youtube :
 Instagram : https://www.instagram.com/mtcorcini/
 
 # Observations
- Please contribute the code so it can get better.
+* Please contribute the code so it can get better.
 
-Part of the Dialogo scripts I got from an internet(Youtube) tutorial, the rest I implemented with my own code<br/>
+* Part of the Dialogo scripts I got from an internet(Youtube) tutorial, the rest I implemented with my own code<br/>
 (if you who created it recognize the part of your code that is there, contact me to leave the credits)
 
 
