@@ -1,0 +1,96 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class DialogoController : MonoBehaviour {
+
+	public GameObject painelDeDialogo;
+	public GameObject resposta;
+
+    public GameObject rawImg;
+    public GameObject rawImgII;
+
+    public Text falaNPC;
+
+    private bool falaAtiva = false;
+
+    FalaNPC falas;
+	
+	// Update is called once per frame
+	void Update ()
+    {
+        if(Input.GetKeyDown(KeyCode.Space) && falaAtiva)
+		{
+            Debug.Log("Click");
+            if (falas.respostas.Length > 0)
+            {
+                MostrarRespostas();
+                FindObjectOfType<PlayerMovement>().runSpeed = 0;
+            }
+            else {
+
+                falaAtiva = false;
+                painelDeDialogo.SetActive(false);
+                falaNPC.gameObject.SetActive(false);
+                FindObjectOfType<PlayerMovement>().runSpeed = 3;
+            }
+		}
+	}
+
+	void MostrarRespostas()
+	{
+		falaNPC.gameObject.SetActive(false);
+		falaAtiva = false;
+
+		for (int i = 0; i < falas.respostas.Length; i++)
+		{
+			GameObject tempResposta = Instantiate(resposta, painelDeDialogo.transform) as GameObject;
+
+            tempResposta.GetComponent<Text>().text = falas.respostas[i].resposta;
+			tempResposta.GetComponent<AnswerButton>().Setup(falas.respostas[i]);
+		}
+	}
+
+	public void ProximaFala(FalaNPC fala)
+	{
+		falas = fala;
+
+		LimparRespostas();
+
+		falaAtiva = true;
+		painelDeDialogo.SetActive(true);
+		falaNPC.gameObject.SetActive(true);
+
+        falaNPC.text = falas.fala;
+
+        PerfilChars();
+    }
+
+	void LimparRespostas()
+	{
+		AnswerButton[] buttons = FindObjectsOfType<AnswerButton>();
+		foreach(AnswerButton button in buttons)
+		{
+			Destroy(button.gameObject);
+		}
+	}
+
+    //Metodo criado para que chame as rawImg conforme seu respectivo NPC
+    void PerfilChars()
+    {
+       rawImgII.SetActive(false);
+
+       if (FindObjectOfType<PlayerMovement>().tocouYellu)
+       {
+           rawImg.SetActive(false);
+           rawImgII.SetActive(true);
+           //Debug.Log("Entrou Em FIND");
+       }
+       else if (FindObjectOfType<PlayerMovement>().tocouPedron)
+       {
+           rawImg.SetActive(true);
+           rawImgII.SetActive(false);
+       }
+    }
+}
